@@ -1,0 +1,12 @@
+# Ignore backup and system files
+*.log
+*.tmp
+.DS_Store
+node_modules/
+dist/
+build/
+.env
+*.swp
+*.bak
+*.old
+*.orig

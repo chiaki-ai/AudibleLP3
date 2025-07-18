@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/audible_lp"
+  to = "/audible_lp.html"
+  status = 200

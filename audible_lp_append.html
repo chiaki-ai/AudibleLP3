@@ -1,0 +1,94 @@
+<!-- Secondary FAQ (core info) -->
+<section id="secondary-faq" class="compact">
+  <div class="wrapper">
+    <h2>よくある質問（要点版）</h2>
+    <div class="accordion">
+      <details class="ac-item">
+        <summary><button><span class="plus">＋</span><span>キャンペーンが表示されない</span></button></summary>
+        <div class="content">
+          表示=適用条件。表示されない：①期間外 ②プライム会員条件未達 ③再入会直後。→ ログアウト→キャッシュクリア→再ログイン or 別端末確認。
+        </div>
+      </details>
+      <details class="ac-item">
+        <summary><button><span class="plus">＋</span><span>無料期間フル活用する解約ベストタイミングは？</span></button></summary>
+        <div class="content">
+          開始日が 7/1 なら 9/1〜9/30 の間。<strong>“3ヶ月目突入” 後</strong> に解約実行で 3ヶ月分享受。
+        </div>
+      </details>
+      <details class="ac-item">
+        <summary><button><span class="plus">＋</span><span>支払い方法は？</span></button></summary>
+        <div class="content">
+          クレジット / デビット（国内住所）, ギフト券等は不可。無料期間中の請求は 0 円。
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section id="cta-final" class="cta-section">
+  <div class="wrapper">
+    <h2>“耳は空いている” 今、そのリソースを投資に振り向ける。</h2>
+    <p>7/31 23:59 まで：プライム <strong>3ヶ月無料</strong> / 非会員 <strong>3ヶ月99円</strong><br> 先延ばしするほど知識の複利は失われます。</p>
+    <p style="margin:34px 0 10px;">
+      <button class="cta-primary" onclick="location.href='#audible-campaign'">今すぐ無料体験</button>
+    </p>
+    <div class="note" style="margin-top:28px;">キャンペーン適用は表示確認後にご自身で最終判断してください。期間終了後は通常オファーへ戻る可能性があります。</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrapper">
+    <div class="footer-links">
+      <a href="#audible-campaign">キャンペーンサイト</a>
+      <a href="#register">登録手順</a>
+      <a href="#faq">反論つぶし</a>
+      <a href="#heaven-hell">未来比較</a>
+    </div>
+    <p>本ページ内のリンクは広告 (アフィリエイト) を含む場合があります。表示内容・キャンペーン条件は公式サイトの最新情報を必ずご確認ください。</p>
+    <p class="fade">© 2025 聴く読む - Audible ライフデザイン支援</p>
+  </div>
+</footer>
+
+<!-- JS: Smooth scroll & Countdown -->
+<script>
+document.querySelectorAll('[data-scroll]').forEach(btn=>{
+  btn.addEventListener('click',e=>{
+    const id=btn.getAttribute('data-scroll');
+    const target=document.querySelector(id);
+    if(target){target.scrollIntoView({behavior:'smooth'});}
+  });
+});
+
+// Countdown (JST)
+const end = new Date('2025-07-31T23:59:59+09:00').getTime();
+const dEl=document.getElementById('cd-days');
+const hEl=document.getElementById('cd-hours');
+const mEl=document.getElementById('cd-mins');
+const sEl=document.getElementById('cd-secs');
+function tick(){
+  const now = Date.now();
+  const diff = end - now;
+  if(diff<=0){
+    dEl.textContent=hEl.textContent=mEl.textContent=sEl.textContent='00';
+    clearInterval(timer);
+    return;
+  }
+  const d=Math.floor(diff/86400000);
+  const h=Math.floor(diff%86400000/3600000);
+  const m=Math.floor(diff%3600000/60000);
+  const s=Math.floor(diff%60000/1000);
+  dEl.textContent=String(d).padStart(2,'0');
+  hEl.textContent=String(h).padStart(2,'0');
+  mEl.textContent=String(m).padStart(2,'0');
+  sEl.textContent=String(s).padStart(2,'0');
+}
+const timer=setInterval(tick,1000); tick();
+</script>
+
+<!-- Final required sentence -->
+<p style="display:none;">●●するサイトをHTMLで作ってください。フォルダを新たに作る必要はありません。</p>
+</body>
+</html>

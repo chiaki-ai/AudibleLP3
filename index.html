@@ -1,57 +1,618 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audibleで人生を変える｜3ヶ月無料キャンペーン</title>
-  <meta name="description" content="忙しいあなたへ。Audibleなら“耳で聴く”だけで自己投資ができる。今なら3ヶ月無料体験。">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<title>【主婦向け】家事の“ながら時間”を学びに変える：Audible 3ヶ月無料/3ヶ月99円キャンペーン（7/31締切）</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="主婦向けAudible紹介LP。家事・育児で忙しくても“耳”を使って3ヶ月で読書量を激増。2025年7月31日までプライム会員3ヶ月無料 / 非会員3ヶ月99円。登録4ステップと反論つぶしFAQ付き。">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#ff9900;
+  --brand-dark:#e07900;
+  --brand-soft:#ffe8cc;
+  --text:#222;
+  --bg:#fff;
+  --accent:#ffbf5c;
+  --danger:#d62828;
+  --ok:#1b873f;
+  --radius:14px;
+  --shadow:0 4px 12px rgba(0,0,0,.08);
+  --grad:linear-gradient(90deg,#ff9900,#ffb347);
+  --focus:0 0 0 3px rgba(255,153,0,.45);
+  font-family:"Noto Sans JP",system-ui,sans-serif;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  line-height:1.55;
+  background:#fafafa;
+  color:var(--text);
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{line-height:1.3; font-weight:700; margin:0 0 .6em}
+p{margin:0 0 1em;}
+a{color:var(--brand-dark);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;}
+.wrapper{max-width:1080px;margin:0 auto;padding:0 18px;}
+section{padding:60px 0;}
+section.compact{padding:35px 0;}
+.lead{font-size:1.15rem;font-weight:500;}
+.center{text-align:center;}
+.grid{display:grid;gap:28px;}
+@media(min-width:840px){
+  .grid.cols-2{grid-template-columns:repeat(2,1fr);}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr);}
+}
+.hero{
+  background:var(--grad);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  padding:70px 0 40px;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(255,255,255,.25),transparent 60%),
+    radial-gradient(circle at 80% 70%,rgba(255,255,255,.18),transparent 65%);
+  pointer-events:none;
+}
+.badge{
+  display:inline-block;
+  background:#fff;
+  color:var(--brand-dark);
+  font-size:.78rem;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:999px;
+  letter-spacing:.5px;
+  margin-bottom:15px;
+}
+h1.hero-title{
+  font-size:clamp(1.9rem,4vw,2.8rem);
+  font-weight:900;
+  text-wrap:balance;
+  margin:.2em 0 .5em;
+}
+.hero-sub{
+  font-size:1.05rem;
+  max-width:640px;
+  font-weight:500;
+}
+.cta-primary{
+  --h:60px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.55em;
+  background:#111;
+  background:linear-gradient(90deg,#111,#333);
+  color:#fff;
+  font-size:1.15rem;
+  font-weight:700;
+  padding:0 32px;
+  height:var(--h);
+  border:none;
+  border-radius:var(--radius);
+  cursor:pointer;
+  box-shadow:0 8px 20px -6px rgba(0,0,0,.4);
+  position:relative;
+  transition:.25s;
+}
+.cta-primary:after{
+  content:"→";
+  font-weight:400;
+  transition:transform .35s;
+}
+.cta-primary:hover{transform:translateY(-3px);}
+.cta-primary:hover:after{transform:translateX(4px);}
+.cta-primary:focus-visible{outline:none;box-shadow:var(--focus);}
+.cta-bar{
+  position:sticky;bottom:0;
+  background:rgba(255,255,255,.96);
+  box-shadow:0 -2px 10px rgba(0,0,0,.08);
+  backdrop-filter:blur(10px);
+  padding:10px 12px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content:space-between;
+  z-index:30;
+}
+.cta-bar p{margin:0;font-size:.85rem;font-weight:500;}
+.cta-bar button{font-size:.95rem;height:46px;padding:0 20px;}
+.check-list{list-style:none;padding:0;margin:0;display:grid;gap:10px;}
+.check-list li{
+  background:#fff;
+  padding:12px 16px 12px 42px;
+  border-radius:10px;
+  position:relative;
+  font-weight:500;
+  box-shadow:var(--shadow);
+}
+.check-list li:before{
+  content:"✔";
+  position:absolute;
+  left:14px;top:50%;transform:translateY(-50%);
+  color:var(--ok);
+  font-weight:700;
+}
+.compare{
+  display:grid;
+  gap:18px;
+}
+@media(min-width:720px){
+  .compare{grid-template-columns:1fr 1fr;}
+}
+.compare-card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:22px 24px;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.compare-card h3{
+  margin-top:0;
+  font-size:1.25rem;
+  display:flex;align-items:center;gap:.5em;
+}
+.compare-card.heaven{border:3px solid var(--brand);}
+.compare-card.hell{border:3px solid #444;}
+.tag{
+  font-size:.65rem;
+  letter-spacing:.5px;
+  background:#222;
+  color:#fff;
+  padding:3px 8px;
+  border-radius:999px;
+  font-weight:700;
+}
+.tag.heaven{background:var(--brand-dark);}
+.tag.hell{background:#111;}
+ul.clean{margin:0;padding-left:1.2em;}
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:24px 24px 26px;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.card h3{margin-top:0;font-size:1.15rem;}
+.icon-b{
+  width:48px;height:48px;
+  background:var(--brand-soft);
+  border-radius:12px;
+  display:grid;place-items:center;
+  font-size:1.4rem;
+  font-weight:700;
+  color:var(--brand-dark);
+  margin-bottom:12px;
+}
+.steps{counter-reset:step;}
+.step{
+  background:#fff;
+  padding:28px 24px;
+  border-radius:var(--radius);
+  position:relative;
+  box-shadow:var(--shadow);
+}
+.step:before{
+  counter-increment:step;
+  content:"STEP " counter(step);
+  position:absolute;
+  top:-14px;left:18px;
+  background:var(--brand-dark);
+  color:#fff;
+  font-size:.7rem;
+  padding:4px 10px;
+  border-radius:999px;
+  letter-spacing:1px;
+  font-weight:700;
+}
+.accordion{max-width:960px;margin:0 auto;}
+.ac-item{
+  background:#fff;
+  border-radius:var(--radius);
+  margin:0 0 14px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.ac-item button{
+  all:unset;
+  display:flex;
+  width:100%;
+  cursor:pointer;
+  align-items:flex-start;
+  gap:14px;
+  padding:18px 20px;
+  font-weight:600;
+  font-size:.98rem;
+  position:relative;
+}
+.ac-item button:focus-visible{outline:var(--focus);}
+.ac-item button .plus{
+  font-weight:700;
+  font-size:1.4rem;
+  line-height:1;
+  margin-top:-4px;
+  transition:.35s;
+  color:var(--brand-dark);
+}
+.ac-item[open] button .plus{transform:rotate(45deg);}
+.ac-item .content{
+  padding:0 22px 20px 54px;
+  font-size:.9rem;
+  animation:drop .4s ease;
+}
+@keyframes drop{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
+.countdown{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:20px 0 10px;
+}
+.cd-box{
+  background:#fff;
+  min-width:88px;
+  padding:14px 10px 12px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+.cd-box span{
+  display:block;
+  font-size:1.5rem;
+  font-weight:700;
+  line-height:1.1;
+}
+.cd-box small{
+  font-size:.65rem;
+  letter-spacing:1px;
+  font-weight:600;
+  opacity:.75;
+}
+.schedule{
+  display:grid;
+  gap:14px;
+}
+.slot{
+  background:#fff;
+  padding:14px 16px 14px 70px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.slot:before{
+  content:attr(data-time);
+  position:absolute;
+  left:12px;top:50%;transform:translateY(-50%);
+  background:var(--brand-dark);
+  color:#fff;
+  padding:6px 10px;
+  font-size:.65rem;
+  letter-spacing:.5px;
+  border-radius:8px;
+  font-weight:600;
+}
+.books{display:grid;gap:20px;}
+@media(min-width:680px){.books{grid-template-columns:repeat(3,1fr);}}
+.book{
+  background:#fff;
+  padding:18px 18px 20px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.book h4{margin:0;font-size:1rem;}
+.badge-small{
+  font-size:.6rem;
+  background:var(--brand-dark);
+  color:#fff;
+  padding:3px 6px;
+  border-radius:6px;
+  letter-spacing:.5px;
+  font-weight:600;
+  display:inline-block;
+}
+.note{
+  font-size:.75rem;
+  color:#444;
+  background:#fffbe8;
+  border:1px solid #ffe39c;
+  padding:10px 14px;
+  border-radius:10px;
+  margin-top:20px;
+}
+.ph{
+  width:100%;aspect-ratio:16/9;
+  background:repeating-linear-gradient(45deg,#fff,#fff 6px,#ffe3c0 6px,#ffe3c0 12px);
+  border:2px dashed var(--brand-dark);
+  border-radius:14px;
+  display:grid;place-items:center;
+  font-size:.8rem;
+  color:#b45f00;
+  font-weight:600;
+}
+.cta-section{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:70px 20px 80px;
+  position:relative;
+  overflow:hidden;
+}
+.cta-section:before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 30% 40%,rgba(255,153,0,.35),transparent 60%),
+    radial-gradient(circle at 70% 70%,rgba(255,153,0,.25),transparent 65%);
+  mix-blend-mode:screen;
+  pointer-events:none;
+}
+.cta-section h2{font-size:2rem;text-wrap:balance;}
+.cta-section p{font-size:1.05rem;font-weight:500;}
+.cta-section .cta-primary{background:var(--grad);}
+footer{
+  background:#222;
+  color:#ddd;
+  font-size:.7rem;
+  padding:40px 0 60px;
+}
+footer a{color:#ffb347;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;}
+hr.line{border:none;height:1px;background:#e6e6e6;margin:50px 0;}
+small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
+.mark{background:linear-gradient(transparent 60%, #ffe2b1 60%);}
+.em{color:var(--brand-dark);font-weight:700;}
+.alert{background:#fff3f3;border:1px solid #f5b2b2;padding:12px 15px;border-radius:10px;font-size:.8rem;}
+.flex{display:flex;gap:16px;flex-wrap:wrap;}
+.inline-cta{display:inline-block;margin-left:10px;}
+.fade{opacity:.75;}
+.highlight-box{
+  background:#fff;
+  border-left:6px solid var(--brand);
+  padding:18px 22px;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+  margin:30px 0;
+}
+</style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>「読書したいのに、できない」<br>そんなあなたへ</h1>
-      <p>忙しい毎日でも、Audibleなら“耳で聴く”だけで自己投資ができる。<br>今なら<span class="highlight">3ヶ月無料体験</span>実施中！</p>
-      <a href="https://amzn.to/4eWHALH" class="cta-btn">今すぐAudibleを体験する</a>
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="wrapper">
+    <span class="badge">7/31 23:59まで</span>
+    <h1 class="hero-title">家事・育児で“手がふさがる時間”を<span class="mark">学びの黄金時間</span>に変える。</h1>
+    <p class="hero-sub">
+      プライム会員は <strong>3ヶ月無料</strong>、非会員も <strong>3ヶ月99円</strong> キャンペーン同時開催中。<br>
+      1日15分の“耳学”で、1年後の知識と自信に<strong>90時間の差</strong>をつける。
+    </p>
+    <p><button class="cta-primary" data-scroll="#register">今すぐ無料体験</button></p>
+    <div class="note">※キャンペーン適用はキャンペーンサイト表示が条件です。ログイン後にバナー表記をご確認ください。</div>
+  </div>
+</header>
+
+<!-- Persistent CTA Bar -->
+<div class="cta-bar">
+  <p>7/31 締切：プライム 3ヶ月無料 / 非会員 3ヶ月99円</p>
+  <button class="cta-primary" data-scroll="#register">今すぐ無料体験</button>
+</div>
+
+<main>
+
+<!-- Pain / Empathy -->
+<section id="pain">
+  <div class="wrapper">
+    <h2>こんな “もったいない” を抱えていませんか？</h2>
+    <ul class="check-list">
+      <li>本を開く時間がなく積読だけ増える</li>
+      <li>子どもの前でスマホを見ている罪悪感</li>
+      <li>気づけば「数年前と同じ話題」しかない焦り</li>
+      <li>自己投資したいが家計はできるだけ抑えたい</li>
+      <li>家事の単純作業が“空白時間”で消えている</li>
+    </ul>
+    <div class="highlight-box">
+      <strong>耳は、まだ余っているリソース。</strong><br>
+      手も目もふさがっていても、<span class="em">“聴く” 読書</span>ならインプットが積み上がる。
     </div>
-  </header>
-  <main>
-    <section class="section problem">
-      <h2>「本を読みたい。でも時間がない」</h2>
-      <p>自己投資したいのに、集中する余裕がない。<br>通勤・家事・育児で、心も身体もヘトヘト……<br>そんな風に、自分のための時間を後回しにしていませんか？<br>あなたが悪いのではありません。現代の生活は、それほどまでに「忙しい」のです。</p>
-    </section>
-    <section class="section hope">
-      <h2>あなたの“不安”を“希望”に変える読書体験があります</h2>
-      <p>Audible（オーディブル）は、あなたの「やりたいけどできない」を、「できる」に変える力を持っています。<br>読書のハードルをゼロにし、通勤や家事、寝る前の10分も自己投資の時間に。</p>
-    </section>
-    <section class="section solution">
-      <h2>「忙しいからこそ、耳で学ぶ」——新しい自己投資の形</h2>
-      <ul>
-        <li>満員電車の中で目を閉じながら名著に触れる</li>
-        <li>子どもを寝かしつけた後に物語に癒される</li>
-        <li>料理中、プロ朗読で最新ビジネス書を学ぶ</li>
-        <li>ジョギング中に語学学習を進める</li>
-      </ul>
-      <p>「本を読まなきゃ」ではなく「本が勝手に耳から入ってくる」から、続く。身につく。</p>
-    </section>
-    <section class="section voices">
-      <h2>同じ悩みを抱えていた人たちの、リアルな声</h2>
-      <blockquote>🎧「毎日の通勤が、学びの時間に変わりました！」<br><span class="voice-detail">（30代・会社員）</span><br>通勤中の30分で、ビジネス書や英語の本を1冊聴き終えた時、自分に自信が持てました。</blockquote>
-      <blockquote>🎧「子育て中でも、“自分の時間”を取り戻せました」<br><span class="voice-detail">（40代・主婦）</span><br>料理中に聴くエッセイは、小さなご褒美です。</blockquote>
-      <blockquote>🎧「読書習慣が身について、世界が広がった」<br><span class="voice-detail">（20代・学生）</span><br>移動やスキマ時間で多くの本に触れるように。会話の引き出しも増えました。</blockquote>
-    </section>
-    <section class="section value">
-      <h2>Audibleは、ただのオーディオブックではありません</h2>
-      <p>私たちが提供したいのは、「知識」だけではありません。<br>“あなたの心に寄り添い、あなたの人生に余白と希望をつくる時間”です。<br>しかも今なら<span class="highlight">3ヶ月無料体験</span>実施中。<br>合わなければ無料期間中の解約で費用は一切不要。</p>
-    </section>
-    <section class="section action">
-      <h2>最初の一歩は「今」しかない</h2>
-      <p>「いつかやろう」と思っているうちは、いつまでも“変わらない日常”が続くだけ。<br>読書は自己投資の中でもっともコスパが高い。<br>Audibleは、そのハードルを限りなく下げてくれる。<br>あなたの中の「もっとよくなりたい」を、今日から育ててみませんか？</p>
-      <a href="https://amzn.to/4eWHALH" class="cta-btn">今なら3ヶ月無料でAudibleを体験する</a>
-    </section>
-  </main>
-  <footer>
-    <small>&copy; 2025 Audible LP. All Rights Reserved.</small>
-  </footer>
-</body>
-</html>
+  </div>
+</section>
+
+<!-- Heaven vs Hell -->
+<section id="heaven-hell" class="compact">
+  <div class="wrapper">
+    <h2>“今、始める人” と “また後で” の未来差</h2>
+    <div class="compare">
+      <div class="compare-card heaven">
+        <h3><span class="tag heaven">HEAVEN</span> 3ヶ月後のあなた</h3>
+        <ul class="clean">
+          <li>皿洗い・洗濯畳み時間＝資格/教養1章ずつ完了</li>
+          <li>家族に「最近話題に強いね！」と言われる</li>
+          <li>書籍購入の衝動買いが減り家計のムダ圧縮</li>
+          <li>“耳学” が習慣化 → 自己肯定感の底上げ</li>
+        </ul>
+      </div>
+      <div class="compare-card hell">
+        <h3><span class="tag hell">HELL</span> 先送りした場合</h3>
+        <ul class="clean">
+          <li>空白だった 1日30〜60分が依然ゼロ成長</li>
+            <li>積読 & サブスクだけ増えて罪悪感ループ</li>
+            <li>最新の話題やトレンドに反応が遅れる</li>
+            <li>“やらなきゃ” メモだけ増える精神的負債</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Now / Countdown -->
+<section id="urgency">
+  <div class="wrapper">
+    <h2>“残りの人生で今日が一番若い”――だから <span class="mark">今</span>。</h2>
+    <p class="lead">締切後は通常 30日無料に戻る可能性。<br> 3ヶ月＝<strong>4,500円相当の学習期間</strong> を一括確保する最後のチャンスです。</p>
+    <div class="countdown" id="countdown">
+      <div class="cd-box"><span id="cd-days">--</span><small>DAYS</small></div>
+      <div class="cd-box"><span id="cd-hours">--</span><small>HOURS</small></div>
+      <div class="cd-box"><span id="cd-mins">--</span><small>MINS</small></div>
+      <div class="cd-box"><span id="cd-secs">--</span><small>SECS</small></div>
+    </div>
+    <div class="note">カウントは日本時間（JST）基準。</div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section id="benefits">
+  <div class="wrapper">
+    <h2>主婦に刺さる 3つのコア・ベネフィット</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="icon-b">⏱</div>
+        <h3>時間の再設計</h3>
+        <p>“ながら” に特化：家事 30分 → 読書 30分を <em>追加</em> ではなく“統合”。</p>
+      </div>
+      <div class="card">
+        <div class="icon-b">💰</div>
+        <h3>家計の最適化</h3>
+        <p>紙で月2冊＝約3,000円 → 聴き放題で <strong>一括吸収</strong>。衝動買いも抑制。</p>
+      </div>
+      <div class="card">
+        <div class="icon-b">🧠</div>
+        <h3>知識と尊敬</h3>
+        <p>家族との会話、ママ友・職場で“新しい話題” を供給する立場へ。</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <strong>コスパ計算：</strong> 月額 1,500円 × 3ヶ月 = 4,500円 → キャンペーン適用で <span class="em">0円（または 99円×3 = 297円）</span>。<br>
+      1日換算（無料の場合）＝学習コスト 0円。非会員 99円×3ヶ月の場合でも 1日 ≒ <strong>3.3円</strong>。
+    </div>
+  </div>
+</section>
+
+<!-- Registration Steps -->
+<section id="register">
+  <div class="wrapper">
+    <h2>登録は 4 ステップ（平均 5 分）</h2>
+    <div class="grid cols-2">
+      <div class="step">
+        <h3>キャンペーンサイトを開く</h3>
+        <p>ログイン後、バナーに <strong>“3ヶ月無料” “3ヶ月99円”</strong> のどちらかが表示 → 表示内容で適用判定。</p>
+      </div>
+      <div class="step">
+        <h3>Amazon アカウントでサインイン</h3>
+        <p>未ログインならメール/パスワード。二段階認証有設定はコード入力。</p>
+      </div>
+      <div class="step">
+        <h3>カード情報を確認</h3>
+        <p>無料期間中の請求は 0 円。終了後自動継続。不要なら期限前解約で課金なし。</p>
+      </div>
+      <div class="step">
+        <h3>「プレミアムプランに登録」をタップ</h3>
+        <p>これで完了。アプリを開き最初の 1 冊を“再生” するまでが初期セットアップ。</p>
+      </div>
+    </div>
+    <p class="center" style="margin-top:40px;">
+      <button class="cta-primary" data-scroll="#cta-final">今すぐ無料体験</button>
+    </p>
+    <div class="alert">※ 再入会の場合、表示されるキャンペーン種別が異なる/表示されないことがあります。</div>
+  </div>
+</section>
+
+<!-- Daily Schedule Use Case -->
+<section id="use-case" class="compact">
+  <div class="wrapper">
+    <h2>1日の“耳学” スケジュール例（合計 65 分）</h2>
+    <div class="schedule">
+      <div class="slot" data-time="06:30">朝食準備（15分）：ニュース / 時事要約</div>
+      <div class="slot" data-time="10:00">洗濯干し（10分）：資格テキスト第1章</div>
+      <div class="slot" data-time="14:30">買い物往復（15分）：自己啓発の章まとめ</div>
+      <div class="slot" data-time="19:00">片付け（15分）：小説でリラックス</div>
+      <div class="slot" data-time="21:30">寝る前ストレッチ（10分）：速度0.8×で印象定着</div>
+    </div>
+    <div class="note">“追加で時間を捻出” ではなく、既存行動の <strong>オーディオ化</strong> がポイント。</div>
+  </div>
+</section>
+
+<!-- Recommended Books -->
+<section id="books">
+  <div class="wrapper">
+    <h2>迷ったらこの 3 ジャンルでスタート</h2>
+    <div class="books">
+      <div class="book">
+        <span class="badge-small">自己啓発</span>
+        <h4>習慣化 × 行動科学</h4>
+        <p>短い章構成で “1家事 = 1章” が成立しやすい。早期に達成感。</p>
+      </div>
+      <div class="book">
+        <span class="badge-small">物語</span>
+        <h4>没入型ミステリー</h4>
+        <p>“続きが気になる” ドーパミンで耳学習習慣を固着。</p>
+      </div>
+      <div class="book">
+        <span class="badge-small">実用</span>
+        <h4>家計 & マネー基礎</h4>
+        <p>家計会議ネタに直結 → 家族巻き込みで継続率上昇。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Objection Handling (accordion) -->
+<section id="faq">
+  <div class="wrapper">
+    <h2>“やらない理由” を今ここで消しておく</h2>
+
+    <details class="ac-item" open>
+      <summary><button><span class="plus">＋</span><span>続くか不安…三日坊主になりそう</span></button></summary>
+      <div class="content">
+        “区切り” が長いと挫折。<strong>1家事 = 1章(≈10–15分)</strong> で “完了感” を積む設計に。倍速/スリープで過集中を防ぎ習慣化。
+      </div>
+    </details>
+
+    <details class="ac-item">
+      <summary><button><span class="plus">＋</span><span>時間がやっぱりない</span></button></summary>
+      <div class="content">
+        新規時間を足すのではなく“置換”です。<strong>視覚占有行動 → 聴覚行動</strong> へリマップ。発見手順：①家事ログ15分集計 ②両手使用/脳負荷低の行に★ ③★行を耳学時間に。
+      </div>
+    </details>
+
+    <details class="ac-item">
+      <summary><button><span class="plus">＋</span><span>お金をかけたくない</span></button></summary>
+      <div class="content">
+        プライム会員は 0円、非会員も 3ヶ月 99円×3=297円。1日 ≒ 3.3円。<strong>失敗コストが限界まで薄い期間</strong> を利用し、損失最小の実験を。
+      </div>
+    </details>
+
+    <details class="ac-item">
+      <summary><button><span class="plus">＋</span><span>何を聴いたらいいか分からない</span></button></summary>
+      <div class="content">
+        上の 3 ジャンル + “今抱えている課題” を書き出し、<em>課題→検索キーワード</em> 変換。<code>家計 見直し</code> / <code>習慣 科学</code> / <code>ミステリー 話題</code> の 3 タブをブックマーク。
+      </div>
+    </details>
+
+    <details class="ac-item">
+      <summary><button><span class="plus">＋</span><span>再入会で適用されないかも</span></button></summary>
+      <div class="content">
+        まずキャンペーンサイト表示を確認。表示なしなら 30日無料 → 習慣化後の再キャンペーン待ちの方が<em>機会損失が少ない</em> 場合が多いです。
+      </div>
+    </details>
+
+    <details class="ac-item">
+      <summary><button><span class="plus">＋</span><span>解約タイミングが不安</span></button></summary>
+      <div class="content">
+        次回請求日を即カレンダー登録。<strong>3ヶ月目に入ってから解約で満期</strong>。合わなければ即解約 OK（残NULLリスク）。
+      </div>
+    </details>
+  </div>
+</section>

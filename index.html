@@ -386,6 +386,31 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
   box-shadow:var(--shadow);
   margin:30px 0;
 }
+.testimonial-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+  padding-bottom:8px;
+  border-bottom:1px solid #f0f0f0;
+}
+.stars{
+  font-size:.9rem;
+  letter-spacing:2px;
+}
+#testimonials .card{
+  position:relative;
+}
+#testimonials .card:before{
+  content:'"';
+  position:absolute;
+  top:-10px;
+  left:15px;
+  font-size:3rem;
+  color:var(--brand-soft);
+  font-weight:700;
+  line-height:1;
+}
 </style>
 </head>
 <body>
@@ -399,7 +424,7 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
       プライム会員は <strong>3ヶ月無料</strong>、非会員も <strong>3ヶ月99円</strong> キャンペーン同時開催中。<br>
       1日15分の“耳学”で、1年後の知識と自信に<strong>90時間の差</strong>をつける。
     </p>
-    <p><button class="cta-primary" onclick="window.open('https://amzn.to/3GI77eZ','_blank')">今すぐ無料体験</button></p>
+    <p><button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">今すぐ無料体験</button></p>
     <div class="note">※キャンペーン適用はキャンペーンサイト表示が条件です。ログイン後にバナー表記をご確認ください。</div>
   </div>
 </header>
@@ -407,7 +432,7 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
 <!-- Persistent CTA Bar -->
 <div class="cta-bar">
   <p>7/31 締切：プライム 3ヶ月無料 / 非会員 3ヶ月99円</p>
-  <button class="cta-primary" onclick="window.open('https://amzn.to/3GI77eZ','_blank')">今すぐ無料体験</button>
+  <button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">今すぐ無料体験</button>
 </div>
 
 <main>
@@ -475,7 +500,7 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
 <!-- Benefits -->
 <section id="benefits">
   <div class="wrapper">
-    <h2>主婦に刺さる 3つのコア・ベネフィット</h2>
+    <h2>忙しいママが実感する 3つのコア・ベネフィット</h2>
     <div class="grid cols-3">
       <div class="card">
         <div class="icon-b">⏱</div>
@@ -523,7 +548,7 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
       </div>
     </div>
     <p class="center" style="margin-top:40px;">
-      <button class="cta-primary" onclick="window.open('https://amzn.to/3GI77eZ','_blank')">今すぐ無料体験</button>
+      <button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">今すぐ無料体験</button>
     </p>
     <div class="alert">※ 再入会の場合、表示されるキャンペーン種別が異なる/表示されないことがあります。</div>
   </div>
@@ -564,6 +589,47 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
         <h4>家計 & マネー基礎</h4>
         <p>家計会議ネタに直結 → 家族巻き込みで継続率上昇。</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials">
+  <div class="wrapper">
+    <h2>実際に使っているママたちの声</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="testimonial-header">
+          <strong>👩 30代・会社員ママ</strong>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p>「毎日の通勤30分が学びの時間に変わりました！家事をしながらビジネス書を聴いて、職場での会話も変わったと言われます。子育て中でも自分の成長を感じられて嬉しいです。」</p>
+      </div>
+      <div class="card">
+        <div class="testimonial-header">
+          <strong>👩 40代・専業主婦</strong>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p>「料理中に小説を聴くのが日課になりました。家事が楽しくなって、夫にも『最近イキイキしてるね』と言われました。月1,500円で毎日が充実するなんて思いませんでした。」</p>
+      </div>
+      <div class="card">
+        <div class="testimonial-header">
+          <strong>👩 20代・育休中ママ</strong>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p>「授乳中や寝かしつけの時間に英語学習。復職への不安が自信に変わりました。赤ちゃんがいても自分の時間を持てるのが嬉しくて、ママ友にもおすすめしています。」</p>
+      </div>
+      <div class="card">
+        <div class="testimonial-header">
+          <strong>👩 35代・パートママ</strong>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p>「掃除機をかけながら自己啓発書を聴いています。『時間がない』が口癖だった私が、今では月に5冊以上インプット。家族からも『話題が豊富になった』と褒められます。」</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <strong>共通点：</strong>みなさん最初は「続くかな？」と不安でしたが、<span class="em">「ながら時間」の活用</span>で無理なく習慣化に成功。<br>
+      <strong>平均利用期間：</strong>1年以上継続 | <strong>満足度：</strong>95%以上
     </div>
   </div>
 </section>

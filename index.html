@@ -2,25 +2,26 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
 <title>【主婦向け】家事の“ながら時間”を学びに変える：Audible 3ヶ月無料/3ヶ月99円キャンペーン（7/31締切）</title>
-<meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="description" content="主婦向けAudible紹介LP。家事・育児で忙しくても“耳”を使って3ヶ月で読書量を激増。2025年7月31日までプライム会員3ヶ月無料 / 非会員3ヶ月99円。登録4ステップと反論つぶしFAQ付き。">
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --brand:#ff9900;
-  --brand-dark:#e07900;
-  --brand-soft:#ffe8cc;
+  --brand:#00bcd4;
+  --brand-dark:#0097a7;
+  --brand-soft:#e0f7fa;
   --text:#222;
   --bg:#fff;
-  --accent:#ffbf5c;
+  --accent:#ff6b6b;
+  --summer-yellow:#ffd93d;
   --danger:#d62828;
-  --ok:#1b873f;
-  --radius:14px;
-  --shadow:0 4px 12px rgba(0,0,0,.08);
-  --grad:linear-gradient(90deg,#ff9900,#ffb347);
-  --focus:0 0 0 3px rgba(255,153,0,.45);
+  --ok:#4caf50;
+  --radius:16px;
+  --shadow:0 4px 16px rgba(0,188,212,.15);
+  --grad:linear-gradient(135deg,#00bcd4,#26c6da,#4dd0e1);
+  --focus:0 0 0 3px rgba(0,188,212,.3);
   font-family:"Noto Sans JP",system-ui,sans-serif;
 }
 *{box-sizing:border-box;}
@@ -44,7 +45,23 @@ section.compact{padding:35px 0;}
 .lead{font-size:1.15rem;font-weight:500;}
 .center{text-align:center;}
 .grid{display:grid;gap:28px;}
-@media(min-width:840px){
+@media(max-width:480px){
+  .wrapper{padding:0 16px;}
+  section{padding:40px 0;}
+  h1.hero-title{font-size:1.8rem;}
+  .hero{padding:50px 0 30px;}
+  .cta-primary{font-size:1rem;padding:0 24px;height:52px;}
+  .grid{gap:20px;}
+  .card{padding:20px;}
+  .countdown{justify-content:center;}
+  .cd-box{min-width:70px;padding:12px 8px;}
+  .testimonial-header{flex-direction:column;align-items:flex-start;gap:8px;}
+}
+@media(min-width:481px) and (max-width:840px){
+  .grid.cols-2{grid-template-columns:1fr;}
+  .grid.cols-3{grid-template-columns:repeat(2,1fr);}
+}
+@media(min-width:841px){
   .grid.cols-2{grid-template-columns:repeat(2,1fr);}
   .grid.cols-3{grid-template-columns:repeat(3,1fr);}
 }
@@ -60,20 +77,22 @@ section.compact{padding:35px 0;}
   position:absolute;
   inset:0;
   background:
-    radial-gradient(circle at 20% 30%,rgba(255,255,255,.25),transparent 60%),
-    radial-gradient(circle at 80% 70%,rgba(255,255,255,.18),transparent 65%);
+    radial-gradient(circle at 20% 30%,rgba(255,255,255,.3),transparent 60%),
+    radial-gradient(circle at 80% 70%,rgba(255,255,255,.2),transparent 65%),
+    radial-gradient(circle at 50% 90%,rgba(255,219,61,.15),transparent 50%);
   pointer-events:none;
 }
 .badge{
   display:inline-block;
-  background:#fff;
-  color:var(--brand-dark);
+  background:var(--summer-yellow);
+  color:#333;
   font-size:.78rem;
   font-weight:700;
-  padding:4px 10px;
+  padding:6px 12px;
   border-radius:999px;
   letter-spacing:.5px;
   margin-bottom:15px;
+  box-shadow:0 2px 8px rgba(255,219,61,.3);
 }
 h1.hero-title{
   font-size:clamp(1.9rem,4vw,2.8rem);
@@ -87,24 +106,25 @@ h1.hero-title{
   font-weight:500;
 }
 .cta-primary{
-  --h:60px;
+  --h:56px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap:.55em;
-  background:#111;
-  background:linear-gradient(90deg,#111,#333);
+  background:var(--grad);
   color:#fff;
-  font-size:1.15rem;
+  font-size:1.1rem;
   font-weight:700;
-  padding:0 32px;
+  padding:0 28px;
   height:var(--h);
   border:none;
   border-radius:var(--radius);
   cursor:pointer;
-  box-shadow:0 8px 20px -6px rgba(0,0,0,.4);
+  box-shadow:var(--shadow);
   position:relative;
-  transition:.25s;
+  transition:.3s;
+  min-height:48px;
+  touch-action:manipulation;
 }
 .cta-primary:after{
   content:"→";
@@ -116,15 +136,16 @@ h1.hero-title{
 .cta-primary:focus-visible{outline:none;box-shadow:var(--focus);}
 .cta-bar{
   position:sticky;bottom:0;
-  background:rgba(255,255,255,.96);
-  box-shadow:0 -2px 10px rgba(0,0,0,.08);
-  backdrop-filter:blur(10px);
-  padding:10px 12px;
+  background:rgba(224,247,250,.95);
+  box-shadow:0 -2px 12px rgba(0,188,212,.12);
+  backdrop-filter:blur(12px);
+  padding:12px 16px;
   display:flex;
-  gap:14px;
+  gap:16px;
   align-items:center;
   justify-content:space-between;
   z-index:30;
+  border-top:1px solid rgba(0,188,212,.1);
 }
 .cta-bar p{margin:0;font-size:.85rem;font-weight:500;}
 .cta-bar button{font-size:.95rem;height:46px;padding:0 20px;}

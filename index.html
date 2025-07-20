@@ -398,6 +398,369 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
 .alert{background:#fff3f3;border:1px solid #f5b2b2;padding:12px 15px;border-radius:10px;font-size:.8rem;}
 .flex{display:flex;gap:16px;flex-wrap:wrap;}
 .inline-cta{display:inline-block;margin-left:10px;}
+
+/* Enhanced Future Comparison Section */
+.future-comparison{
+  background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);
+  padding:80px 0;
+  position:relative;
+  overflow:hidden;
+}
+.future-comparison:before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(0,188,212,.08),transparent 50%),
+    radial-gradient(circle at 80% 80%,rgba(255,107,107,.06),transparent 50%);
+  pointer-events:none;
+}
+.section-header{
+  text-align:center;
+  margin-bottom:60px;
+}
+.impact-title{
+  font-size:clamp(2rem,5vw,3.2rem);
+  font-weight:900;
+  line-height:1.2;
+  margin-bottom:16px;
+  color:#1a1a1a;
+}
+.highlight-text{
+  background:linear-gradient(135deg,var(--brand),var(--brand-dark));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  position:relative;
+}
+.section-subtitle{
+  font-size:1.2rem;
+  color:#666;
+  font-weight:500;
+  max-width:600px;
+  margin:0 auto;
+}
+.future-split{
+  display:grid;
+  gap:40px;
+  margin-bottom:60px;
+}
+@media(min-width:900px){
+  .future-split{grid-template-columns:1fr 1fr;gap:60px;}
+}
+.future-card{
+  background:#fff;
+  border-radius:24px;
+  padding:32px;
+  box-shadow:0 20px 60px rgba(0,0,0,.1);
+  position:relative;
+  overflow:hidden;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.future-card:hover{
+  transform:translateY(-8px);
+}
+.success-path{
+  border:3px solid var(--brand);
+  background:linear-gradient(135deg,#fff 0%,rgba(0,188,212,.02) 100%);
+}
+.success-path:hover{
+  box-shadow:0 25px 80px rgba(0,188,212,.2);
+}
+.failure-path{
+  border:3px solid #ff6b6b;
+  background:linear-gradient(135deg,#fff 0%,rgba(255,107,107,.02) 100%);
+}
+.failure-path:hover{
+  box-shadow:0 25px 80px rgba(255,107,107,.15);
+}
+.card-header{
+  text-align:center;
+  margin-bottom:32px;
+}
+.status-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 20px;
+  border-radius:999px;
+  font-size:.85rem;
+  font-weight:700;
+  letter-spacing:.5px;
+  margin-bottom:16px;
+}
+.status-badge.success{
+  background:linear-gradient(135deg,var(--brand),var(--brand-dark));
+  color:#fff;
+  box-shadow:0 4px 20px rgba(0,188,212,.3);
+}
+.status-badge.failure{
+  background:linear-gradient(135deg,#ff6b6b,#e55353);
+  color:#fff;
+  box-shadow:0 4px 20px rgba(255,107,107,.3);
+}
+.badge-icon{
+  font-size:1.1rem;
+}
+.card-title{
+  font-size:1.8rem;
+  font-weight:800;
+  margin:0 0 8px;
+  color:#1a1a1a;
+}
+.card-subtitle{
+  font-size:1rem;
+  color:#666;
+  margin:0;
+}
+.visual-section{
+  margin:32px 0;
+  padding:24px;
+  background:rgba(248,249,250,.8);
+  border-radius:16px;
+  border:1px solid rgba(0,0,0,.05);
+}
+.success-visual,.failure-visual{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.growth-chart{
+  display:flex;
+  align-items:end;
+  gap:8px;
+  height:80px;
+  flex:1;
+}
+.chart-bar{
+  background:linear-gradient(to top,var(--brand),var(--brand-dark));
+  border-radius:4px 4px 0 0;
+  min-width:40px;
+  position:relative;
+  animation:growUp 1.5s ease-out;
+  box-shadow:0 2px 8px rgba(0,188,212,.2);
+}
+.chart-bar span{
+  position:absolute;
+  bottom:-20px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:.7rem;
+  font-weight:600;
+  color:#666;
+  white-space:nowrap;
+}
+@keyframes growUp{
+  from{height:0;}
+  to{height:var(--height,100%);}
+}
+.stagnation-chart{
+  flex:1;
+  height:80px;
+  position:relative;
+  background:#f8f9fa;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.flat-line{
+  width:80%;
+  height:3px;
+  background:#ddd;
+  border-radius:2px;
+  position:relative;
+}
+.flat-line:after{
+  content:'停滞';
+  position:absolute;
+  top:-25px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:.8rem;
+  color:#999;
+  font-weight:600;
+}
+.time-wasted{
+  position:absolute;
+  top:-40px;
+  right:0;
+  text-align:center;
+}
+.waste-number{
+  display:block;
+  font-size:1.2rem;
+  font-weight:800;
+  color:#ff6b6b;
+}
+.waste-label{
+  font-size:.7rem;
+  color:#999;
+}
+.success-metrics,.failure-metrics{
+  display:flex;
+  gap:16px;
+}
+.metric{
+  text-align:center;
+  padding:12px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+  min-width:70px;
+}
+.metric.negative{
+  opacity:.6;
+}
+.metric-number{
+  display:block;
+  font-size:1.5rem;
+  font-weight:800;
+  color:var(--brand);
+}
+.metric.negative .metric-number{
+  color:#999;
+}
+.metric-label{
+  font-size:.7rem;
+  color:#666;
+  font-weight:600;
+}
+.benefits-list,.problems-list{
+  display:grid;
+  gap:16px;
+  margin:24px 0;
+}
+.benefit-item,.problem-item{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  padding:16px;
+  background:rgba(248,249,250,.6);
+  border-radius:12px;
+  border-left:4px solid var(--brand);
+  transition:all .3s ease;
+}
+.problem-item{
+  border-left-color:#ff6b6b;
+}
+.benefit-item:hover,.problem-item:hover{
+  background:rgba(248,249,250,.9);
+  transform:translateX(4px);
+}
+.benefit-icon,.problem-icon{
+  font-size:1.5rem;
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  flex-shrink:0;
+}
+.benefit-content,.problem-content{
+  flex:1;
+}
+.benefit-content strong,.problem-content strong{
+  display:block;
+  font-size:1rem;
+  font-weight:700;
+  color:#1a1a1a;
+  margin-bottom:4px;
+}
+.benefit-content p,.problem-content p{
+  font-size:.9rem;
+  color:#666;
+  margin:0;
+  line-height:1.4;
+}
+.card-footer{
+  text-align:center;
+  margin-top:32px;
+  padding-top:24px;
+  border-top:1px solid rgba(0,0,0,.1);
+}
+.future-quote{
+  font-size:1.1rem;
+  font-weight:600;
+  font-style:italic;
+  color:#666;
+  position:relative;
+}
+.success-footer .future-quote{
+  color:var(--brand-dark);
+}
+.failure-footer .future-quote{
+  color:#ff6b6b;
+}
+.decision-prompt{
+  text-align:center;
+  background:#fff;
+  padding:48px 32px;
+  border-radius:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.1);
+  position:relative;
+  overflow:hidden;
+}
+.decision-prompt:before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  background:linear-gradient(135deg,rgba(0,188,212,.03),rgba(255,219,61,.03));
+  pointer-events:none;
+}
+.prompt-title{
+  font-size:2rem;
+  font-weight:800;
+  margin-bottom:16px;
+  color:#1a1a1a;
+}
+.prompt-text{
+  font-size:1.1rem;
+  color:#666;
+  margin-bottom:32px;
+  max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.mega-cta{
+  font-size:1.2rem;
+  padding:20px 40px;
+  height:auto;
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  background:linear-gradient(135deg,var(--brand),var(--brand-dark));
+  box-shadow:0 8px 32px rgba(0,188,212,.3);
+  transition:all .3s ease;
+}
+.mega-cta:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 48px rgba(0,188,212,.4);
+}
+.cta-text{
+  font-size:1.2rem;
+  font-weight:800;
+}
+.cta-subtext{
+  font-size:.9rem;
+  opacity:.9;
+  font-weight:500;
+}
+@media(max-width:768px){
+  .future-comparison{padding:60px 0;}
+  .future-card{padding:24px;}
+  .success-visual,.failure-visual{flex-direction:column;gap:16px;}
+  .growth-chart{height:60px;}
+  .chart-bar{min-width:30px;}
+  .success-metrics,.failure-metrics{justify-content:center;}
+  .decision-prompt{padding:32px 20px;}
+  .mega-cta{padding:16px 32px;font-size:1.1rem;}
+}
 .fade{opacity:.75;}
 .highlight-box{
   background:#fff;
@@ -476,33 +839,167 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
   </div>
 </section>
 
-<!-- Heaven vs Hell -->
-<section id="heaven-hell" class="compact">
+<!-- Heaven vs Hell - Enhanced Visual Section -->
+<section id="heaven-hell" class="future-comparison">
   <div class="wrapper">
-    <h2>“今、始める人” と “また後で” の未来差</h2>
-    <div class="compare">
-      <div class="compare-card heaven">
-        <h3><span class="tag heaven">HEAVEN</span> 3ヶ月後のあなた</h3>
-        <ul class="clean">
-          <li>皿洗い・洗濯畳み時間＝資格/教養1章ずつ完了</li>
-          <li>家族に「最近話題に強いね！」と言われる</li>
-          <li>書籍購入の衝動買いが減り家計のムダ圧縮</li>
-          <li>“耳学” が習慣化 → 自己肯定感の底上げ</li>
-        </ul>
+    <div class="section-header">
+      <h2 class="impact-title">あなたの<span class="highlight-text">未来</span>は、<span class="highlight-text">今日の選択</span>で決まる</h2>
+      <p class="section-subtitle">3ヶ月後、あなたはどちらの人生を歩んでいますか？</p>
+    </div>
+    
+    <div class="future-split">
+      <!-- SUCCESS PATH -->
+      <div class="future-card success-path">
+        <div class="card-header">
+          <div class="status-badge success">
+            <span class="badge-icon">🌟</span>
+            <span class="badge-text">SUCCESS</span>
+          </div>
+          <h3 class="card-title">今日から始めたあなた</h3>
+          <p class="card-subtitle">3ヶ月後の輝く未来</p>
+        </div>
+        
+        <div class="visual-section">
+          <div class="success-visual">
+            <div class="growth-chart">
+              <div class="chart-bar" style="height: 20%;"><span>1週目</span></div>
+              <div class="chart-bar" style="height: 45%;"><span>1ヶ月</span></div>
+              <div class="chart-bar" style="height: 70%;"><span>2ヶ月</span></div>
+              <div class="chart-bar" style="height: 100%;"><span>3ヶ月</span></div>
+            </div>
+            <div class="success-metrics">
+              <div class="metric">
+                <span class="metric-number">15+</span>
+                <span class="metric-label">冊読了</span>
+              </div>
+              <div class="metric">
+                <span class="metric-number">90+</span>
+                <span class="metric-label">時間学習</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">📚</div>
+            <div class="benefit-content">
+              <strong>知識が爆発的に増加</strong>
+              <p>家事時間が学習時間に変換され、月5冊以上の読書を達成</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">💬</div>
+            <div class="benefit-content">
+              <strong>会話力・存在感UP</strong>
+              <p>「最近話題豊富だね」と家族・友人から一目置かれる存在に</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">💰</div>
+            <div class="benefit-content">
+              <strong>家計の最適化</strong>
+              <p>書籍の衝動買いが減り、月3,000円以上の節約効果</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">✨</div>
+            <div class="benefit-content">
+              <strong>自己肯定感の向上</strong>
+              <p>毎日の小さな成長実感で、自信と充実感に満ちた日々</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-footer success-footer">
+          <div class="future-quote">"あの時始めて本当に良かった"</div>
+        </div>
       </div>
-      <div class="compare-card hell">
-        <h3><span class="tag hell">HELL</span> 先送りした場合</h3>
-        <ul class="clean">
-          <li>空白だった 1日30〜60分が依然ゼロ成長</li>
-            <li>積読 & サブスクだけ増えて罪悪感ループ</li>
-            <li>最新の話題やトレンドに反応が遅れる</li>
-            <li>“やらなきゃ” メモだけ増える精神的負債</li>
-        </ul>
+      
+      <!-- FAILURE PATH -->
+      <div class="future-card failure-path">
+        <div class="card-header">
+          <div class="status-badge failure">
+            <span class="badge-icon">😔</span>
+            <span class="badge-text">REGRET</span>
+          </div>
+          <h3 class="card-title">先送りしたあなた</h3>
+          <p class="card-subtitle">3ヶ月後の現実</p>
+        </div>
+        
+        <div class="visual-section">
+          <div class="failure-visual">
+            <div class="stagnation-chart">
+              <div class="flat-line"></div>
+              <div class="time-wasted">
+                <span class="waste-number">90時間</span>
+                <span class="waste-label">無駄にした時間</span>
+              </div>
+            </div>
+            <div class="failure-metrics">
+              <div class="metric negative">
+                <span class="metric-number">0</span>
+                <span class="metric-label">冊読了</span>
+              </div>
+              <div class="metric negative">
+                <span class="metric-number">0</span>
+                <span class="metric-label">成長実感</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="problems-list">
+          <div class="problem-item">
+            <div class="problem-icon">📱</div>
+            <div class="problem-content">
+              <strong>時間の浪費が継続</strong>
+              <p>1日30-60分の空白時間が3ヶ月で90時間の機会損失</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">📚</div>
+            <div class="problem-content">
+              <strong>積読の山が増加</strong>
+              <p>「読まなきゃ」プレッシャーだけが増え、罪悪感の悪循環</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">💸</div>
+            <div class="problem-content">
+              <strong>無駄な出費が継続</strong>
+              <p>衝動的な書籍購入やサブスク契約で月3,000円以上の損失</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">😰</div>
+            <div class="problem-content">
+              <strong>取り残される不安</strong>
+              <p>話題についていけず、「私だけ成長していない」焦燥感</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-footer failure-footer">
+          <div class="future-quote">"あの時始めていれば..."</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="decision-prompt">
+      <div class="prompt-content">
+        <h3 class="prompt-title">どちらの未来を選びますか？</h3>
+        <p class="prompt-text">選択の時は<strong>今</strong>です。3ヶ月後の自分に感謝される決断を。</p>
+        <button class="cta-primary mega-cta" onclick="window.open('https://amzn.to/45c5hfB','_blank')">
+          <span class="cta-text">成功の未来を選ぶ</span>
+          <span class="cta-subtext">3ヶ月無料で今すぐ開始</span>
+        </button>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Urgency -->
 <!-- Why Now / Countdown -->
 <section id="urgency">
   <div class="wrapper">

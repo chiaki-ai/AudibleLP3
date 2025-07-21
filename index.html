@@ -72,6 +72,35 @@ section.compact{padding:35px 0;}
   overflow:hidden;
   padding:70px 0 40px;
 }
+.hero-content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.hero-text{
+  z-index:2;
+  position:relative;
+}
+.hero-visual{
+  position:relative;
+}
+.hero-image{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+@media(max-width:768px){
+  .hero-content{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .hero-image{
+    height:300px;
+  }
+}
 .hero:before{
   content:"";
   position:absolute;
@@ -844,6 +873,20 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
   color:var(--text);
   font-size:1.2rem;
 }
+.story-image{
+  margin-bottom:20px;
+  border-radius:12px;
+  overflow:hidden;
+}
+.timeline-image{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition:transform .3s ease;
+}
+.timeline-image:hover{
+  transform:scale(1.05);
+}
 .daily-schedule{
   display:grid;
   gap:12px;
@@ -1565,14 +1608,21 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
 <!-- Hero Section -->
 <header class="hero">
   <div class="wrapper">
-    <span class="badge">7/31 23:59まで</span>
-    <h1 class="hero-title">家事・育児で“手がふさがる時間”を<span class="mark">学びの黄金時間</span>に変える。</h1>
-    <p class="hero-sub">
-      プライム会員は <strong>3ヶ月無料</strong>、非会員も <strong>3ヶ月99円</strong> キャンペーン同時開催中。<br>
-      1日15分の“耳学”で、1年後の知識と自信に<strong>90時間の差</strong>をつける。
-    </p>
-    <p><button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">今すぐ無料体験</button></p>
-    <div class="note">※キャンペーン適用はキャンペーンサイト表示が条件です。ログイン後にバナー表記をご確認ください。</div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="badge">🎧 3ヶ月無料キャンペーン実施中</div>
+        <h1 class="hero-title">家事の"ながら時間"を<br><span class="mark">学びの黄金時間</span>に変える</h1>
+        <p class="hero-sub">
+          プライム会員は <strong>3ヶ月無料</strong>、非会員も <strong>3ヶ月99円</strong> キャンペーン同時開催中。<br>
+          1日15分の"耳学"で、1年後の知識と自信に<strong>90時間の差</strong>をつける。
+        </p>
+        <p><button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">今すぐ無料体験</button></p>
+        <div class="note">※キャンペーン適用はキャンペーンサイト表示が条件です。ログイン後にバナー表記をご確認ください。</div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="ヘッドフォンで音楽を聴く女性" class="hero-image">
+      </div>
+    </div>
   </div>
 </header>
 
@@ -1648,6 +1698,9 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
         <div class="timeline-marker">開始前</div>
         <div class="timeline-content">
           <div class="story-card negative">
+            <div class="story-image">
+              <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="疲れた主婦" class="timeline-image">
+            </div>
             <h3>📱 登録前の田中さん（35歳・2児の母）</h3>
             <div class="daily-schedule">
               <div class="schedule-item">
@@ -1682,6 +1735,9 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
         <div class="timeline-marker">1週間後</div>
         <div class="timeline-content">
           <div class="story-card neutral">
+            <div class="story-image">
+              <img src="https://images.unsplash.com/photo-1494790108755-2616c9c0b8d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="ヘッドフォンで学習する女性" class="timeline-image">
+            </div>
             <h3>🎧 Audible開始1週間目</h3>
             <div class="changes-list">
               <div class="change-item">

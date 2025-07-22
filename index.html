@@ -123,6 +123,84 @@ section.compact{padding:35px 0;}
   margin-bottom:15px;
   box-shadow:0 2px 8px rgba(255,219,61,.3);
 }
+.urgency-banner{
+  display:inline-block;
+  background:linear-gradient(45deg,#ff4444,#ff6666);
+  color:#fff;
+  font-size:.85rem;
+  font-weight:700;
+  padding:8px 16px;
+  border-radius:8px;
+  letter-spacing:.3px;
+  margin-bottom:15px;
+  box-shadow:0 4px 12px rgba(255,68,68,.4);
+  border:2px solid #fff;
+}
+.days-left{
+  font-size:1.1em;
+  color:#ffff00;
+  text-shadow:0 0 4px rgba(255,255,0,.5);
+}
+.blink-text{
+  animation:blink 1.5s infinite;
+  margin-left:8px;
+  background:#ffff00;
+  color:#ff0000;
+  padding:2px 6px;
+  border-radius:4px;
+  font-weight:900;
+}
+@keyframes blink{
+  0%,50%{opacity:1;}
+  51%,100%{opacity:0.7;}
+}
+.cta-note{
+  display:block;
+  font-size:.8rem;
+  color:rgba(255,255,255,.8);
+  margin-top:8px;
+  font-weight:500;
+}
+.risk-reversal{
+  background:#f8f9fa;
+  padding:40px 0;
+  border-bottom:3px solid var(--brand);
+}
+.guarantee-box{
+  background:#fff;
+  border-radius:16px;
+  padding:32px;
+  box-shadow:0 8px 32px rgba(0,0,0,.1);
+  border:2px solid var(--brand-soft);
+  text-align:center;
+}
+.guarantee-box h3{
+  margin:0 0 24px;
+  font-size:1.4rem;
+  color:var(--brand-dark);
+}
+.guarantee-items{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+.guarantee-item{
+  background:var(--brand-soft);
+  padding:12px 16px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:.9rem;
+  color:var(--brand-dark);
+}
+@media(max-width:768px){
+  .guarantee-items{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .guarantee-box{
+    padding:24px;
+  }
+}
 h1.hero-title{
   font-size:clamp(1.9rem,4vw,2.8rem);
   font-weight:900;
@@ -1610,13 +1688,17 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
   <div class="wrapper">
     <div class="hero-content">
       <div class="hero-text">
-        <div class="badge">🎧 3ヶ月無料キャンペーン実施中</div>
+        <div class="urgency-banner">
+          ⚠️ 残り<span id="days-countdown" class="days-left">8</span>日！7月31日で終了
+          <span class="blink-text">今だけ3ヶ月無料</span>
+        </div>
         <h1 class="hero-title">家事の"ながら時間"を<br><span class="mark">学びの黄金時間</span>に変える</h1>
         <p class="hero-sub">
           プライム会員は <strong>3ヶ月無料</strong>、非会員も <strong>3ヶ月99円</strong> キャンペーン同時開催中。<br>
           1日15分の"耳学"で、1年後の知識と自信に<strong>90時間の差</strong>をつける。
         </p>
-        <p><button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">今すぐ無料体験</button></p>
+        <p><button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">【無料】今すぐ3ヶ月体験を始める</button></p>
+        <small class="cta-note">※1分で登録完了、いつでも解約OK</small>
         <div class="note">※キャンペーン適用はキャンペーンサイト表示が条件です。ログイン後にバナー表記をご確認ください。</div>
       </div>
       <div class="hero-visual">
@@ -1626,10 +1708,25 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
   </div>
 </header>
 
+<!-- Risk Reversal Guarantee -->
+<section class="risk-reversal">
+  <div class="wrapper">
+    <div class="guarantee-box">
+      <h3>🛡️ 完全リスクフリー保証</h3>
+      <div class="guarantee-items">
+        <div class="guarantee-item">✅ 3ヶ月間完全無料（プライム会員）</div>
+        <div class="guarantee-item">✅ いつでも1クリックで解約</div>
+        <div class="guarantee-item">✅ 解約後も購入した本は永久保存</div>
+        <div class="guarantee-item">✅ 気に入らなければ即解約OK</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Persistent CTA Bar -->
 <div class="cta-bar">
-  <p>7/31 締切：プライム 3ヶ月無料 / 非会員 3ヶ月99円</p>
-  <button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">今すぐ無料体験</button>
+  <p>⚠️ 残り8日！7/31 締切：プライム 3ヶ月無料 / 非会員 3ヶ月99円</p>
+  <button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">【無料】今すぐ始める</button>
 </div>
 
 <main>

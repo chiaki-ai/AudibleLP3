@@ -201,6 +201,214 @@ section.compact{padding:35px 0;}
     padding:24px;
   }
 }
+.deep-problem-section{
+  background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);
+  padding:80px 0;
+  position:relative;
+}
+.deep-problem-section::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg,var(--brand),var(--summer-teal));
+}
+.problem-analysis{
+  display:grid;
+  gap:40px;
+  margin-top:50px;
+}
+.surface-problem{
+  background:#fff;
+  padding:32px;
+  border-radius:16px;
+  box-shadow:0 8px 32px rgba(0,0,0,.1);
+  border-left:4px solid #dc3545;
+}
+.surface-problem h3{
+  color:#dc3545;
+  margin:0 0 24px;
+  font-size:1.3rem;
+}
+.problem-list{
+  display:grid;
+  gap:16px;
+}
+.problem-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px;
+  background:#f8f9fa;
+  border-radius:8px;
+  border:1px solid #dee2e6;
+}
+.problem-icon{
+  font-size:1.2rem;
+  flex-shrink:0;
+}
+.problem-text{
+  font-weight:500;
+  color:#495057;
+}
+.real-problem{
+  background:#fff;
+  padding:32px;
+  border-radius:16px;
+  box-shadow:0 8px 32px rgba(0,0,0,.1);
+  border-left:4px solid var(--brand);
+}
+.real-problem h3{
+  color:var(--brand-dark);
+  margin:0 0 24px;
+  font-size:1.3rem;
+}
+.real-problem-content{
+  display:grid;
+  gap:24px;
+}
+.problem-point{
+  padding:20px;
+  background:var(--brand-soft);
+  border-radius:12px;
+  border:1px solid rgba(255,153,0,.2);
+}
+.problem-point h4{
+  color:var(--brand-dark);
+  margin:0 0 12px;
+  font-size:1.1rem;
+  font-weight:700;
+}
+.problem-point p{
+  margin:0;
+  color:#495057;
+  line-height:1.6;
+}
+.solution-preview{
+  text-align:center;
+}
+.solution-box{
+  background:linear-gradient(135deg,var(--brand),var(--summer-teal));
+  color:#fff;
+  padding:32px;
+  border-radius:16px;
+  box-shadow:0 12px 40px rgba(255,153,0,.3);
+}
+.solution-box h3{
+  margin:0 0 16px;
+  font-size:1.4rem;
+}
+.solution-box p{
+  margin:0 0 24px;
+  font-size:1.1rem;
+  opacity:.9;
+}
+.solution-benefits{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.benefit-item{
+  background:rgba(255,255,255,.2);
+  padding:12px 16px;
+  border-radius:8px;
+  font-weight:600;
+  backdrop-filter:blur(10px);
+}
+@media(max-width:768px){
+  .solution-benefits{
+    grid-template-columns:1fr;
+  }
+  .deep-problem-section{
+    padding:60px 0;
+  }
+  .surface-problem,.real-problem,.solution-box{
+    padding:24px;
+  }
+}
+.postscript-section{
+  background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%);
+  color:#fff;
+  padding:80px 0;
+  position:relative;
+}
+.postscript-section::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg,var(--brand),var(--summer-teal));
+}
+.ps-content{
+  max-width:800px;
+  margin:0 auto;
+  text-align:center;
+}
+.ps-title{
+  font-size:2.5rem;
+  font-weight:900;
+  margin:0 0 40px;
+  color:var(--brand);
+  text-shadow:0 2px 4px rgba(0,0,0,.3);
+}
+.ps-message{
+  font-size:1.1rem;
+  line-height:1.8;
+  margin-bottom:40px;
+}
+.ps-message p{
+  margin:0 0 20px;
+  opacity:.95;
+}
+.ps-message strong{
+  color:var(--summer-yellow);
+  font-weight:700;
+}
+#ps-days-left{
+  color:#ff6b6b;
+  font-weight:900;
+  font-size:1.2em;
+  text-shadow:0 0 8px rgba(255,107,107,.5);
+}
+.ps-cta{
+  margin-top:40px;
+}
+.mega-cta{
+  font-size:1.3rem;
+  padding:20px 40px;
+  background:linear-gradient(135deg,var(--brand),#ff6b35);
+  border:none;
+  border-radius:12px;
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 8px 32px rgba(255,153,0,.4);
+  transition:all .3s ease;
+  text-transform:none;
+}
+.mega-cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 40px rgba(255,153,0,.6);
+}
+@media(max-width:768px){
+  .postscript-section{
+    padding:60px 0;
+  }
+  .ps-title{
+    font-size:2rem;
+  }
+  .ps-message{
+    font-size:1rem;
+  }
+  .mega-cta{
+    font-size:1.1rem;
+    padding:16px 32px;
+  }
+}
 h1.hero-title{
   font-size:clamp(1.9rem,4vw,2.8rem);
   font-weight:900;
@@ -1922,6 +2130,67 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
   </div>
 </section>
 
+<!-- Deep Problem Analysis Section -->
+<section id="deep-problem" class="deep-problem-section">
+  <div class="wrapper">
+    <div class="section-header center">
+      <h2 class="section-title">なぜ、あなたの読書習慣は<span class="highlight-text">続かない</span>のか？</h2>
+      <p class="section-subtitle">本当の問題は「時間がない」ことではありません</p>
+    </div>
+    
+    <div class="problem-analysis">
+      <div class="surface-problem">
+        <h3>❌ 多くの人が勘違いしている原因</h3>
+        <div class="problem-list">
+          <div class="problem-item">
+            <span class="problem-icon">⏰</span>
+            <span class="problem-text">「時間がないから読書できない」</span>
+          </div>
+          <div class="problem-item">
+            <span class="problem-icon">💰</span>
+            <span class="problem-text">「本が高いから買えない」</span>
+          </div>
+          <div class="problem-item">
+            <span class="problem-icon">📚</span>
+            <span class="problem-text">「難しい本は理解できない」</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="real-problem">
+        <h3>✅ 読書習慣が続かない<strong>本当の理由</strong></h3>
+        <div class="real-problem-content">
+          <div class="problem-point">
+            <h4>1. 読書を「特別な時間」だと思い込んでいる</h4>
+            <p>静かな場所で、集中して、本を開いて...そんな「完璧な読書環境」を求めるから続かないのです。</p>
+          </div>
+          <div class="problem-point">
+            <h4>2. 「目で読む」ことにこだわりすぎている</h4>
+            <p>現代人の生活リズムに「座って本を読む時間」を作るのは現実的ではありません。</p>
+          </div>
+          <div class="problem-point">
+            <h4>3. 読書を「義務」として捉えている</h4>
+            <p>「読まなければいけない」という義務感が、読書を苦痛にしているのです。</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="solution-preview">
+        <div class="solution-box">
+          <h3>💡 だからこそ、Audibleなのです</h3>
+          <p>読書を「ながら時間」に変えることで、これらの問題をすべて解決できます。</p>
+          <div class="solution-benefits">
+            <div class="benefit-item">🚶‍♀️ 歩きながら学習</div>
+            <div class="benefit-item">🍳 料理しながら成長</div>
+            <div class="benefit-item">🚗 通勤時間を活用</div>
+            <div class="benefit-item">😌 リラックスして聴く</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- UI/UX Reassurance Section -->
 <section id="registration-ease" class="registration-ease-section">
   <div class="wrapper">
@@ -2543,6 +2812,49 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
 <footer style="background:#333;color:#fff;padding:30px 0;text-align:center;font-size:.8rem;">
   <div class="wrapper">
     <p>※ このページはAmazon.co.jpアソシエイトプログラムに参加しています</p>
+  </div>
+</footer>
+
+<!-- Postscript (PS) Section -->
+<section id="postscript" class="postscript-section">
+  <div class="wrapper">
+    <div class="ps-content">
+      <h2 class="ps-title">追伸</h2>
+      <div class="ps-message">
+        <p>このページを作った私も、かつては「読書したいのに時間がない」と悩んでいた一人でした。</p>
+        
+        <p>子育てと仕事に追われる毎日で、本を開く時間なんてありませんでした。でも、心の奥底では「このままでいいのかな？」「もっと成長したい」という気持ちがありました。</p>
+        
+        <p>Audibleと出会って、私の人生は本当に変わりました。</p>
+        
+        <p><strong>家事をしながら学べる。通勤しながら成長できる。</strong></p>
+        
+        <p>「ながら時間」が「学びの時間」に変わった瞬間、私は自分の可能性を信じられるようになりました。</p>
+        
+        <p>あなたにも、同じ体験をしてほしい。</p>
+        
+        <p>忙しい毎日の中でも、少しずつ成長していく自分を感じてほしい。家族との会話が弾んで、自分に自信が持てるようになってほしい。</p>
+        
+        <p><strong>7月31日まで、あと<span id="ps-days-left">8</span>日です。</strong></p>
+        
+        <p>この機会を逃すと、また「いつかやろう」の繰り返しになってしまうかもしれません。</p>
+        
+        <p>今日、この瞬間が、あなたの人生を変える最初の一歩になることを、心から願っています。</p>
+      </div>
+      
+      <div class="ps-cta">
+        <button class="cta-primary mega-cta" onclick="window.open('https://amzn.to/45c5hfB','_blank')">
+          【無料】今すぐ3ヶ月体験を始める
+        </button>
+        <small class="cta-note">※プライム会員なら完全無料、非会員も月99円×3ヶ月</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#333;color:#fff;padding:30px 0;text-align:center;font-size:.8rem;">
+  <div class="wrapper">
+    <p>&copy; 2025 Audible Landing Page. All rights reserved.</p>
   </div>
 </footer>
 

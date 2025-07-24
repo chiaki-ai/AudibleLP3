@@ -417,6 +417,142 @@ section.compact{padding:35px 0;}
     padding:16px 32px;
   }
 }
+.benefits-deep-dive-section{
+  background:linear-gradient(135deg,#fff 0%,#f8f9fa 100%);
+  padding:80px 0;
+  position:relative;
+}
+.benefits-deep-dive-section::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg,var(--brand),var(--summer-teal));
+}
+.benefits-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:40px;
+  margin-top:50px;
+}
+.benefit-card{
+  background:#fff;
+  border-radius:20px;
+  padding:32px;
+  box-shadow:0 12px 40px rgba(0,0,0,.1);
+  border:2px solid transparent;
+  transition:all .3s ease;
+  position:relative;
+  overflow:hidden;
+}
+.benefit-card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:var(--brand);
+}
+.benefit-card.knowledge::before{
+  background:linear-gradient(90deg,#4CAF50,#66BB6A);
+}
+.benefit-card.conversation::before{
+  background:linear-gradient(90deg,#2196F3,#42A5F5);
+}
+.benefit-card.savings::before{
+  background:linear-gradient(90deg,#FF9800,#FFB74D);
+}
+.benefit-card.confidence::before{
+  background:linear-gradient(90deg,#E91E63,#F06292);
+}
+.benefit-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
+.benefit-icon{
+  font-size:3rem;
+  margin-bottom:20px;
+  display:block;
+}
+.benefit-title{
+  font-size:1.4rem;
+  font-weight:700;
+  color:#2c3e50;
+  margin:0 0 12px;
+}
+.benefit-subtitle{
+  font-size:1rem;
+  color:#666;
+  margin:0 0 24px;
+  line-height:1.6;
+}
+.benefit-details{
+  display:grid;
+  gap:20px;
+}
+.detail-item{
+  padding:16px;
+  background:#f8f9fa;
+  border-radius:12px;
+  border-left:4px solid var(--brand-soft);
+}
+.detail-item h4{
+  font-size:1rem;
+  font-weight:600;
+  color:var(--brand-dark);
+  margin:0 0 8px;
+}
+.detail-item p{
+  font-size:.9rem;
+  color:#495057;
+  margin:0;
+  line-height:1.6;
+}
+.benefits-summary{
+  margin-top:60px;
+  text-align:center;
+}
+.summary-box{
+  background:linear-gradient(135deg,var(--brand),#ff6b35);
+  color:#fff;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 16px 50px rgba(255,153,0,.3);
+  max-width:800px;
+  margin:0 auto;
+}
+.summary-box h3{
+  font-size:1.5rem;
+  margin:0 0 16px;
+  font-weight:700;
+}
+.summary-box p{
+  font-size:1.1rem;
+  margin:0 0 24px;
+  opacity:.95;
+  line-height:1.6;
+}
+@media(max-width:768px){
+  .benefits-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+  .benefit-card{
+    padding:24px;
+  }
+  .benefits-deep-dive-section{
+    padding:60px 0;
+  }
+  .summary-box{
+    padding:32px 24px;
+  }
+  .summary-box h3{
+    font-size:1.3rem;
+  }
+}
 h1.hero-title{
   font-size:clamp(1.9rem,4vw,2.8rem);
   font-weight:900;
@@ -2134,6 +2270,110 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
     <div class="process-cta center">
       <p class="cta-message">あなたも田中さんのような変化を体験してみませんか？</p>
       <button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">私も3ヶ月で変わる</button>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Deep Dive Section -->
+<section id="benefits-deep-dive" class="benefits-deep-dive-section">
+  <div class="wrapper">
+    <div class="section-header center">
+      <h2 class="section-title">Audibleで得られる<span class="highlight-text">4つの大きな変化</span></h2>
+      <p class="section-subtitle">「ながら時間」があなたの人生をこんなに変えます</p>
+    </div>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card knowledge">
+        <div class="benefit-icon">📚</div>
+        <h3 class="benefit-title">知識が爆発的に増加</h3>
+        <p class="benefit-subtitle">家事時間が学習時間に変換され、月5冊以上の読書を達成</p>
+        
+        <div class="benefit-details">
+          <div class="detail-item">
+            <h4>🕰️ 時間の有効活用</h4>
+            <p>料理中30分、掃除中20分、通勤中40分。一日の「すきま時間」が約<strong>90分の学習時間</strong>に変わります。</p>
+          </div>
+          <div class="detail-item">
+            <h4>📈 読書量の飛躍的向上</h4>
+            <p>今まで月、0冊だった読書が、<strong>月、5～8冊</strong>に。年間では60～96冊の知識を吸収できます。</p>
+          </div>
+          <div class="detail-item">
+            <h4>🌱 多分野の知識習得</h4>
+            <p>ビジネス書、小説、歴史、心理学、料理、英語学習など、幅広いジャンルで教養を身につけられます。</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="benefit-card conversation">
+        <div class="benefit-icon">💬</div>
+        <h3 class="benefit-title">会話力・存在感UP</h3>
+        <p class="benefit-subtitle">「最近話題豊富だね」と家族・友人から一目置かれる存在に</p>
+        
+        <div class="benefit-details">
+          <div class="detail-item">
+            <h4>🚀 話題の引き出しが増える</h4>
+            <p>新しい本から得た知識やエピソードで、会話のネタが尽きることがありません。<strong>「この前読んだ本では…」</strong>が口癖になります。</p>
+          </div>
+          <div class="detail-item">
+            <h4>👥 家族との関係改善</h4>
+            <p>夫から「最近、興味深い話をしてくれるね」、子供から「お母さん、物知りだね！」と言われるように。</p>
+          </div>
+          <div class="detail-item">
+            <h4>✨ 自信と存在感の向上</h4>
+            <p>知識が増えることで、人との会話に自信を持てるように。ママ友や職場でも「頼りになる人」として評価されます。</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="benefit-card savings">
+        <div class="benefit-icon">💰</div>
+        <h3 class="benefit-title">家計の最適化</h3>
+        <p class="benefit-subtitle">書籍の衝動買いが減り、月3,000円以上の節約効果</p>
+        
+        <div class="benefit-details">
+          <div class="detail-item">
+            <h4>📚 書籍費の大幅削減</h4>
+            <p>今まで月に5,000円かかっていた書籍代が、Audibleの<strong>月1,500円</strong>だけに。月、3,500円、年間で<strong>42,000円の節約</strong>です。</p>
+          </div>
+          <div class="detail-item">
+            <h4>📦 本の置き場所問題解決</h4>
+            <p>本棚がいっぱいで新しい本が置けない、引っ越しのたびに本が重荷物になる、そんな悩みから解放されます。</p>
+          </div>
+          <div class="detail-item">
+            <h4>🔄 無駄な購入の減少</h4>
+            <p>「買ったけど読まない本」がなくなります。聴き始めてから合わないと思ったら、すぐに別の本に切り替えられます。</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="benefit-card confidence">
+        <div class="benefit-icon">✨</div>
+        <h3 class="benefit-title">自己肯定感の向上</h3>
+        <p class="benefit-subtitle">毎日の小さな成長実感で、自信と充実感に満ちた日々</p>
+        
+        <div class="benefit-details">
+          <div class="detail-item">
+            <h4>🌱 毎日の成長実感</h4>
+            <p>「今日も新しいことを学んだ」という小さな達成感が積み重なり、<strong>「私、成長してる！」</strong>と実感できるようになります。</p>
+          </div>
+          <div class="detail-item">
+            <h4>💪 自分への投資意識</h4>
+            <p>「家事や育児で精いっぱい」から「家事をしながら自分に投資している」というポジティブな意識に変化。</p>
+          </div>
+          <div class="detail-item">
+            <h4>🎆 将来への希望</h4>
+            <p>「このままでいいのかな？」という不安が「これからもっと成長できる！」という希望に変わり、毎日が楽しみになります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="benefits-summary">
+      <div class="summary-box">
+        <h3>🎆 これらすべてが、たった月1,500円で手に入ります</h3>
+        <p>今なら<strong>3ヶ月間無料</strong>でこの変化を体験できます。あなたの人生がどんな風に変わるか、想像してみてください。</p>
+        <button class="cta-primary" onclick="window.open('https://amzn.to/45c5hfB','_blank')">【無料】3ヶ月体験で変化を実感する</button>
+      </div>
     </div>
   </div>
 </section>

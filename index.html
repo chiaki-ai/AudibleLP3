@@ -2873,6 +2873,7 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
   const hEl = document.getElementById('cd-hours');
   const mEl = document.getElementById('cd-mins');
   const sEl = document.getElementById('cd-secs');
+  const psEl = document.getElementById('ps-days-left'); // 追伸の残り日数要素
   
   if (!dEl || !hEl || !mEl || !sEl) {
     console.warn('Countdown elements not found');
@@ -2887,6 +2888,7 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
     
     if (diff <= 0) {
       dEl.textContent = hEl.textContent = mEl.textContent = sEl.textContent = '00';
+      if (psEl) psEl.textContent = '0';
       clearInterval(timer);
       return;
     }
@@ -2900,6 +2902,11 @@ small.code{font-family:ui-monospace,monospace;font-size:.65rem;opacity:.7;}
     hEl.textContent = String(h).padStart(2, '0');
     mEl.textContent = String(m).padStart(2, '0');
     sEl.textContent = String(s).padStart(2, '0');
+    
+    // 追伸セクションの残り日数も更新
+    if (psEl) {
+      psEl.textContent = String(d);
+    }
   }
   
   const timer = setInterval(tick, 1000);
